@@ -21,8 +21,8 @@
 
   --blue-500: #3a7cfd;
 
-  --gradient-1: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
-  --gradient-2: linear-gradient(135deg, #3710bd 0%, #a42395 100%);
+  --gradient-1: linear-gradient(165deg, #55ddff 0%, #c058f3 100%);
+  --gradient-2: linear-gradient(165deg, #3710bd 0%, #a42395 100%);
 
   --spacing-0: 0rem;
   --spacing-100: 0.5rem;
