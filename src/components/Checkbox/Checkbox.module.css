@@ -4,3 +4,7 @@
   border-radius: 50%;
   border: 1px solid var(--purple-300);
 }
+
+.completed {
+  background: var(--gradient-1);
+}
