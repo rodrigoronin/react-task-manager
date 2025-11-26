@@ -1,11 +1,17 @@
 import Header from "./components/Header/Header";
-import "./App.css";
+import Input from "./components/Input/Input";
+import style from "./App.module.css";
 
 function App() {
   return (
     <>
       <Header />
-      <Header />
+
+      <div className={style.container}>
+        <div>
+          <Input />
+        </div>
+      </div>
     </>
   );
 }
