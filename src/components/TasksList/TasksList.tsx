@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddTask from "../AddTask/AddTask";
 import TaskItem from "../TaskItem/TaskItem";
 import TaskListFooter from "./components/TaskListFooter";
@@ -6,34 +6,40 @@ import TaskListFooter from "./components/TaskListFooter";
 import type { Task } from "../../types/task";
 import style from "./TasksList.module.css";
 
+const tempTasks = [
+  {
+    id: "1",
+    title: "Daily shadow boxing training",
+    completed: false,
+  },
+  {
+    id: "2",
+    title: "Work on TODO app",
+    completed: true,
+  },
+  {
+    id: "3",
+    title: "Work on my game",
+    completed: false,
+  },
+  {
+    id: "4",
+    title: "Make coffee",
+    completed: true,
+  },
+  {
+    id: "5",
+    title: "Play some games",
+    completed: true,
+  },
+];
+
 const TaskList = () => {
-  const [tasks, setTasks] = useState<Task[]>([
-    {
-      id: "1",
-      title: "Daily shadow boxing training",
-      completed: false,
-    },
-    {
-      id: "2",
-      title: "Work on TODO app",
-      completed: true,
-    },
-    {
-      id: "3",
-      title: "Work on my game",
-      completed: false,
-    },
-    {
-      id: "4",
-      title: "Make coffee",
-      completed: true,
-    },
-    {
-      id: "5",
-      title: "Play some games",
-      completed: true,
-    },
-  ]);
+  const [tasks, setTasks] = useState<Task[]>([]);
+
+  useEffect(() => {
+    setTasks(tempTasks);
+  }, []);
 
   function getRemainingTasks(): number {
     return tasks.filter((task) => !task.completed).length;
