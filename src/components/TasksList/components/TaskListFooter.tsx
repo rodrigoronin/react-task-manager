@@ -2,7 +2,11 @@ import Card from "../../Card/Card";
 
 import style from "./TaskListFooter.module.css";
 
-const TaskListFooter = ({ tasksRemaining }) => {
+interface FooterProps {
+  tasksRemaining: () => number;
+}
+
+const TaskListFooter = ({ tasksRemaining }: FooterProps) => {
   return (
     <Card>
       <div className={style.container}>
