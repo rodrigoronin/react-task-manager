@@ -1,7 +1,5 @@
 import { useState } from "react";
 import AddTask from "../AddTask/AddTask";
-import Card from "../Card/Card";
-import Checkbox from "../Checkbox/Checkbox";
 import TaskItem from "../TaskItem/TaskItem";
 import TaskListFooter from "./components/TaskListFooter";
 
