@@ -15,8 +15,7 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const currentDateInMilliseconds = new Date();
-    const id = `${title}${currentDateInMilliseconds.getMilliseconds()}`;
+    const id = crypto.randomUUID();
 
     onAddTask({
       id,
