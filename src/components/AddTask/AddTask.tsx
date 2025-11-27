@@ -14,6 +14,7 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
     const currentDateInMilliseconds = new Date();
     const id = `${title}${currentDateInMilliseconds.getMilliseconds()}`;
 
@@ -22,6 +23,8 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
       title,
       completed: false,
     });
+
+    setTitle("");
   };
 
   return (
