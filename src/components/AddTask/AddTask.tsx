@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from "react";
 import Card from "../Card/Card";
-import Checkbox from "../Checkbox/Checkbox";
 
 import style from "./AddTask.module.css";
 import type { Task } from "../../types/task";
@@ -11,6 +10,7 @@ interface AddTaskProps {
 
 const AddTask = ({ onAddTask }: AddTaskProps) => {
   const [title, setTitle] = useState<string>("");
+  const [completed, setCompleted] = useState<boolean>(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
     onAddTask({
       id,
       title,
-      completed: false,
+      completed,
     });
 
     setTitle("");
@@ -31,7 +31,10 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
   return (
     <Card>
       <form className={style.container} onSubmit={handleSubmit}>
-        <Checkbox />
+        <span
+          className={`${style.checkbox} ${completed && style.completed}`}
+          onClick={() => setCompleted(true)}
+        ></span>
         <input
           className={`${style.input} text-preset-1`}
           id="input"
