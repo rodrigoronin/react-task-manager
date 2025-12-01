@@ -8,7 +8,7 @@ import style from "./TasksList.module.css";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
-  const [filterType, setFilterType] = useState<string>("");
+  const [filterType, setFilterType] = useState<string>("all");
 
   function getRemainingTasks(): number {
     return tasks.filter((task) => !task.completed).length;
@@ -41,7 +41,11 @@ const TaskList = () => {
           <TaskItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />
         ))}
         {tasks.length > 0 && (
-          <TaskListFooter tasksRemaining={getRemainingTasks()} setFilter={setFilterType} />
+          <TaskListFooter
+            tasksRemaining={getRemainingTasks()}
+            setFilter={setFilterType}
+            clearCompleted={() => setTasks((prev) => prev.filter((task) => !task.completed))}
+          />
         )}
       </div>
     </div>
