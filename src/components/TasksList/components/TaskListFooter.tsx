@@ -4,9 +4,10 @@ import style from "./TaskListFooter.module.css";
 
 interface FooterProps {
   tasksRemaining: number;
+  setFilter: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const TaskListFooter = ({ tasksRemaining }: FooterProps) => {
+const TaskListFooter = ({ tasksRemaining, setFilter }: FooterProps) => {
   return (
     <Card>
       <div className={style.container}>
@@ -14,13 +15,25 @@ const TaskListFooter = ({ tasksRemaining }: FooterProps) => {
           className={`${style["remaining-tasks"]} text-preset-2`}
         >{`${tasksRemaining} items left`}</span>
         <div className={style.filter}>
-          <button type="button" className={`${style.button} text-preset-3`}>
+          <button
+            type="button"
+            className={`${style.button} text-preset-3`}
+            onClick={() => setFilter("all")}
+          >
             All
           </button>
-          <button type="button" className={`${style.button} text-preset-3`}>
+          <button
+            type="button"
+            className={`${style.button} text-preset-3`}
+            onClick={() => setFilter("active")}
+          >
             Active
           </button>
-          <button type="button" className={`${style.button} text-preset-3`}>
+          <button
+            type="button"
+            className={`${style.button} text-preset-3`}
+            onClick={() => setFilter("completed")}
+          >
             Completed
           </button>
         </div>

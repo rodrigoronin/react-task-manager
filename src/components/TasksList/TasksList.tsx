@@ -8,6 +8,7 @@ import style from "./TasksList.module.css";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [filterType, setFilterType] = useState<string>("");
 
   function getRemainingTasks(): number {
     return tasks.filter((task) => !task.completed).length;
@@ -25,14 +26,23 @@ const TaskList = () => {
     setTasks((prev) => prev.filter((t) => t.id !== id));
   }
 
+  // returning true will result in the entire tasks array being returned without any filters
+  const filteredTasks: Task[] = tasks.filter((task) => {
+    if (filterType === "active") return !task.completed;
+    if (filterType === "completed") return task.completed;
+    return true;
+  });
+
   return (
     <div className={style.container}>
       <AddTask onAddTask={onAddTask} />
       <div>
-        {tasks.map((task) => (
+        {filteredTasks.map((task) => (
           <TaskItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />
         ))}
-        {tasks.length > 0 && <TaskListFooter tasksRemaining={getRemainingTasks()} />}
+        {tasks.length > 0 && (
+          <TaskListFooter tasksRemaining={getRemainingTasks()} setFilter={setFilterType} />
+        )}
       </div>
     </div>
   );
