@@ -13,7 +13,7 @@ interface TaskItemProps {
 const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
   return (
     <Card>
-      <Checkbox completed={task.completed} id={task.id} onToggle={onToggle} />
+      <Checkbox completed={task.completed} taskId={task.id} onToggle={onToggle} />
       <span className={`${style.title} ${task.completed && style.completed} text-preset-1`}>
         {task.title}
       </span>

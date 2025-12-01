@@ -2,15 +2,15 @@ import style from "./Checkbox.module.css";
 
 interface CheckboxProps {
   completed: boolean;
-  id: string;
+  taskId: string;
   onToggle: (id: string) => void;
 }
 
-const Checkbox = ({ completed = false, id, onToggle }: CheckboxProps) => {
+const Checkbox = ({ completed = false, taskId, onToggle }: CheckboxProps) => {
   return (
     <span
       className={`${style.checkbox} ${completed && style.completed}`}
-      onClick={() => onToggle(id)}
+      onClick={() => onToggle(taskId)}
     ></span>
   );
 };
