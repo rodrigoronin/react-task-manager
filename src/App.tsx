@@ -1,8 +1,8 @@
 import Header from "./components/Header/Header";
+import Banner from "./components/Banner/Banner";
 import TasksList from "./components/TasksList/TasksList";
 
 import style from "./App.module.css";
-import Banner from "./components/Banner/Banner";
 
 function App() {
   const htmlEle = document.documentElement;
