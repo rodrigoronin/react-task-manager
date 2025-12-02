@@ -1,0 +1,16 @@
+.filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--tertiary-color);
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
