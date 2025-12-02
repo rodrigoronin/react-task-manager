@@ -1,6 +1,6 @@
-import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
 import TasksList from "./components/TasksList/TasksList";
+import Banner from "./components/Banner/Banner";
+import Header from "./components/Header/Header";
 
 import style from "./App.module.css";
 
@@ -9,10 +9,10 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Banner />
 
       <div className={style.container}>
-        <Banner changeTheme={() => htmlEle.classList.toggle("dark")} />
+        <Header changeTheme={() => htmlEle.classList.toggle("dark")} />
         <TasksList />
       </div>
     </>

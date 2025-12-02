@@ -1,7 +1,18 @@
 import style from "./Header.module.css";
 
-const Header = () => {
-  return <div className={style.header}></div>;
+interface HeaderProps {
+  changeTheme: () => void;
+}
+
+const Header = ({ changeTheme }: HeaderProps) => {
+  return (
+    <header className={style.banner}>
+      <h1 className={style.title}>TODO</h1>
+      <span className={style["theme-icon"]} onClick={changeTheme}>
+        Theme
+      </span>
+    </header>
+  );
 };
 
 export default Header;
