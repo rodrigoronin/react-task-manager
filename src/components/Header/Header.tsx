@@ -14,7 +14,7 @@ const Header = ({ changeTheme }: HeaderProps) => {
   const handleThemeChange = () => {
     const htmlEle = document.documentElement;
     changeTheme();
-    setDarkMode((prev) => (prev = htmlEle.classList.contains("dark")));
+    setDarkMode(htmlEle.classList.contains("dark"));
   };
 
   return (
