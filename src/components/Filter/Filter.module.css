@@ -14,3 +14,11 @@
   cursor: pointer;
   color: inherit;
 }
+
+.button:hover {
+  color: var(--secondary-color);
+}
+
+.active {
+  color: var(--filter-active);
+}
