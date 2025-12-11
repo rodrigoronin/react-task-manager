@@ -1,4 +1,5 @@
 import style from "./Checkbox.module.css";
+import checkedIcon from "../../assets/checked_icon.svg";
 
 interface CheckboxProps {
   completed: boolean;
@@ -15,7 +16,14 @@ const Checkbox = ({ completed = false, taskId, onToggle, onChange }: CheckboxPro
         if (taskId && onToggle) onToggle(taskId);
         else onChange?.();
       }}
-    ></span>
+    >
+      {completed && (
+        <svg width={24} height={24}>
+          <rect width="100%" height="100%" fill="transparent" />
+          <image href={checkedIcon} width={16} height={16} x="20%" y="20%" />
+        </svg>
+      )}
+    </span>
   );
 };
 
