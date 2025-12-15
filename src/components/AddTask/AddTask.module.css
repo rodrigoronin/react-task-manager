@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -12,4 +13,11 @@
   background: transparent;
   color: var(--tertiary-color);
   font: inherit;
+}
+
+.button-submit {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
