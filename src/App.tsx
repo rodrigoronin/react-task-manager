@@ -14,9 +14,6 @@ function App() {
       <div className={style.container}>
         <Header changeTheme={() => htmlEle.classList.toggle("dark")} />
         <TasksList />
-        <span className={`text-preset-2 ${style["reorder-hint"]}`}>
-          Drag and drop to reorder list
-        </span>
       </div>
     </>
   );

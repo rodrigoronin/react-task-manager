@@ -27,7 +27,7 @@ const TaskList = () => {
     }),
     useSensor(TouchSensor, {
       activationConstraint: { delay: 150, tolerance: 5 },
-    })
+    }),
   );
 
   function getRemainingTasks(): number {
@@ -101,6 +101,10 @@ const TaskList = () => {
           </SortableContext>
         </DndContext>
       </div>
+
+      <span className={`text-preset-2 ${style["reorder-hint"]}`}>
+        Drag and drop to reorder list
+      </span>
     </>
   );
 };
