@@ -1,4 +1,4 @@
-# Todo Task Manager (React + TypeScript)
+# Task Manager (React + TypeScript)
 
 ---
 
@@ -6,19 +6,19 @@
 
 Aplicativo simples de gerenciamento de tarefas, permitindo ao usuário:
 
-* Criar novas tarefas
-* Marcar tarefas como concluídas
-* Editar tarefas
-* Excluir tarefas
+- Criar novas tarefas
+- Marcar tarefas como concluídas
+- Editar tarefas
+- Excluir tarefas
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **React 19**
-* **TypeScript**
-* **Vite*
-* **CSS Modules**
+- **React 19**
+- **TypeScript**
+- \*_Vite_
+- **CSS Modules**
 
 ---
 
@@ -27,7 +27,7 @@ Aplicativo simples de gerenciamento de tarefas, permitindo ao usuário:
 1. Clone o repositório:
 
 ```
-git clone git@github.com:rodrigoronin/react-todo-app.git
+git clone git@github.com:rodrigoronin/react-task-manager.git
 ```
 
 2. Instale as dependências:
@@ -67,18 +67,18 @@ src/
 
 ## ✨ Funcionalidades Futuras (rascunho)
 
-* Filtro por status (todas, completas, pendentes)
-* Ordenação por data
-* Persistência via Database
-* Tema claro/escuro
-* Versão mobile responsiva
+- Filtro por status (todas, completas, pendentes)
+- Ordenação por data
+- Persistência via Database
+- Tema claro/escuro
+- Versão mobile responsiva
 
 ---
 
 ## 🧪 Testes
 
-* Jest
-* React Testing Library
+- Jest
+- React Testing Library
 
 ---
 
@@ -87,4 +87,3 @@ src/
 Definir mais tarde.
 
 ---
-
