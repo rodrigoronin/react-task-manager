@@ -1,4 +1,4 @@
-import TasksList from "./components/TasksList/TasksList";
+import { Outlet } from "react-router";
 import Banner from "./components/Banner/Banner";
 import Header from "./components/Header/Header";
 
@@ -13,7 +13,8 @@ function App() {
 
       <div className={style.container}>
         <Header changeTheme={() => htmlEle.classList.toggle("dark")} />
-        <TasksList />
+
+        <Outlet />
       </div>
     </>
   );
