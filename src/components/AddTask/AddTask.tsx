@@ -46,7 +46,8 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
           onChange={() => setNewTask((prev) => ({ ...prev, completed: !prev.completed }))}
         />
         <Input
-          inputValue={newTask.title}
+          value={newTask.title}
+          placeholderText="Create a new task..."
           onChange={(e) => setNewTask((prev) => ({ ...prev, title: e.target.value }))}
         />
         <button className={style["button-submit"]} type="submit">
