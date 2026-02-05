@@ -10,6 +10,12 @@
   font-weight: var(--font-bold);
 }
 
+.login-container-guest {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 .login-container-form {
   display: flex;
   flex-direction: column;
@@ -26,4 +32,5 @@
   border: none;
   border-radius: 15px;
   background: var(--gradient-1);
+  cursor: pointer;
 }

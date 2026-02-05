@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { Link } from "react-router";
 import Card from "../../components/Card/Card";
 import Input from "../../components/Input/Input";
 
@@ -44,6 +45,10 @@ const LoginPage = () => {
             LOGIN
           </button>
         </form>
+
+        <Link to="/dashboard">
+          <button className={style["login-container-guest"]}>Enter as guest</button>
+        </Link>
       </div>
     </Card>
   );
