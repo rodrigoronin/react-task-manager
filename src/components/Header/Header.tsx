@@ -19,7 +19,7 @@ const Header = ({ changeTheme }: HeaderProps) => {
 
   return (
     <header className={style.header}>
-      <h1 className={style.title}>TODO</h1>
+      <h1 className={style.title}>Task Manager</h1>
       <svg width={24} height={24} className={style["theme-icon"]} onClick={handleThemeChange}>
         <rect width="100%" height="100%" fill="transparent" />
         <image

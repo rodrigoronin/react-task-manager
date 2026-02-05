@@ -7,14 +7,6 @@
   background: transparent;
 }
 
-.input {
-  border: none;
-  outline: none;
-  background: transparent;
-  color: var(--tertiary-color);
-  font: inherit;
-}
-
 .button-submit {
   margin-left: auto;
   border: none;

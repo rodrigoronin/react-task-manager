@@ -1,6 +1,7 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-200);
   padding: var(--spacing-300) var(--spacing-200);
   border-radius: 5px;
