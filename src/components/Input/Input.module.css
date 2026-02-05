@@ -1,7 +1,9 @@
 .input {
   border: none;
+  border-bottom: 1px solid var(--tertiary-color);
   outline: none;
   background: transparent;
   color: var(--tertiary-color);
   font: inherit;
+  padding-bottom: 2px;
 }

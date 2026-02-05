@@ -45,11 +45,17 @@ const AddTask = ({ onAddTask }: AddTaskProps) => {
           completed={newTask.completed}
           onChange={() => setNewTask((prev) => ({ ...prev, completed: !prev.completed }))}
         />
-        <Input
-          value={newTask.title}
-          placeholderText="Create a new task..."
-          onChange={(e) => setNewTask((prev) => ({ ...prev, title: e.target.value }))}
-        />
+
+        <fieldset className={style["container-fields"]}>
+          <label htmlFor="title"></label>
+          <Input
+            id="title"
+            value={newTask.title}
+            placeholderText="Create a new task..."
+            onChange={(e) => setNewTask((prev) => ({ ...prev, title: e.target.value }))}
+          />
+        </fieldset>
+
         <button className={style["button-submit"]} type="submit">
           <svg width={20} height={20}>
             <rect width="100%" height="100%" fill="transparent" />

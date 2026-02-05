@@ -28,26 +28,32 @@ const LoginPage = () => {
         <h1 className={style["login-container-title"]}>Login</h1>
 
         <form className={style["login-container-form"]} action="submit" onSubmit={handleSubmit}>
-          <Input
-            value={formData.email}
-            placeholderText="e-mail"
-            onChange={(e) => setFormaData((prev) => ({ ...prev, email: e.target.value }))}
-          />
+          <fieldset className={style["login-container-form-fields"]}>
+            <label htmlFor="email">E-mail</label>
+            <Input
+              id="email"
+              value={formData.email}
+              onChange={(e) => setFormaData((prev) => ({ ...prev, email: e.target.value }))}
+            />
+          </fieldset>
 
-          <Input
-            type="password"
-            placeholderText="password"
-            value={formData.password}
-            onChange={(e) => setFormaData((prev) => ({ ...prev, password: e.target.value }))}
-          />
+          <fieldset className={style["login-container-form-fields"]}>
+            <label htmlFor="password">Password</label>
+            <Input
+              id="password"
+              type="password"
+              value={formData.password}
+              onChange={(e) => setFormaData((prev) => ({ ...prev, password: e.target.value }))}
+            />
+          </fieldset>
 
           <button className={style["login-container-form-button"]} type="submit">
             LOGIN
           </button>
         </form>
 
-        <Link to="/dashboard">
-          <button className={style["login-container-guest"]}>Enter as guest</button>
+        <Link to="/dashboard" className={style["login-container-guest-link"]}>
+          <button className={style["login-container-guest-button"]}>Enter as guest</button>
         </Link>
       </div>
     </Card>
